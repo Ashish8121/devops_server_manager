@@ -1,0 +1,248 @@
+========================================================
+ DEVOPS SERVER HEALTH MONITOR - LEARNING CHECKLIST
+========================================================
+
+Legend:
+[X] Completed
+[~] In Progress
+[ ] Not Started
+
+
+========================================================
+PHASE 1: LINUX FUNDAMENTALS
+========================================================
+
+[X] Linux filesystem and directory navigation
+[X] Absolute and relative paths
+[X] File inspection: ls, cat, tail, nl
+[X] File permissions: read, write, execute
+[X] chmod and numeric permissions (664, 740)
+[ ] File ownership: chown, users and groups
+[ ] Process management: ps, top, pgrep, kill
+[ ] Disk inspection: df and du
+[ ] Memory inspection: free
+[ ] Exit codes and the $? variable
+[ ] Environment variables and PATH
+
+
+========================================================
+PHASE 2: BASH SCRIPTING
+========================================================
+
+[X] Variables
+[X] Command substitution: $(...)
+[X] if, elif and else conditions
+[X] Numeric comparisons
+[X] Arithmetic operations
+[X] Command pipelines
+[X] Memory usage calculation
+[X] Threshold-based warnings
+[X] Input and output validation
+[~] Error handling
+[~] Health status management
+[ ] Bash functions
+[ ] Loops
+[ ] Script arguments and options
+[ ] Exit codes for scripts
+[ ] set -e, set -u and pipefail
+[ ] ShellCheck and script linting
+
+
+========================================================
+PHASE 3: SERVER MONITORING
+========================================================
+
+[X] Memory monitoring
+[X] CPU load average monitoring
+[X] CPU core count using nproc
+[X] Root filesystem disk monitoring
+[X] Warning and critical thresholds
+[X] Overall server health report
+[ ] CPU utilization versus CPU load average
+[ ] Monitoring multiple filesystems
+[ ] Service status monitoring
+[ ] Network connectivity monitoring
+[ ] Handling monitoring command failures
+[ ] Handling missing or invalid readings
+
+
+========================================================
+PHASE 4: LINUX LOGGING
+========================================================
+
+[X] Standard output (stdout)
+[X] Standard error (stderr)
+[X] File descriptors 0, 1 and 2
+[X] Output redirection using >
+[X] Append output using >>
+[X] Redirect errors using 2>
+[X] Combine streams using 2>&1
+[X] Display and save output using tee
+[X] Add timestamps to reports
+[ ] Send error messages explicitly to stderr
+[ ] Separate normal reports and error logs
+[ ] Log levels: INFO, WARNING, ERROR, CRITICAL
+[ ] Troubleshooting through logs
+
+
+========================================================
+PHASE 5: CRON SCHEDULING
+========================================================
+
+[X] Understand what cron does
+[X] Cron schedule syntax
+[X] crontab -l
+[X] crontab -e
+[X] Make the script executable
+[X] Use absolute paths in cron
+[X] Schedule the health check every five minutes
+[X] Append reports to the health log
+[ ] Troubleshoot failed cron jobs
+[ ] Understand cron's execution environment
+[ ] Safely modify and disable scheduled jobs
+
+
+========================================================
+PHASE 6: LOGROTATE AND LOG RETENTION
+========================================================
+
+[X] Understand why log rotation is needed
+[X] Inspect /etc/logrotate.d configurations
+[X] Configure daily rotation
+[X] Understand rotate 7
+[X] Compress old logs
+[X] Understand missingok
+[X] Understand notifempty
+[X] Understand dateext
+[X] Understand copytruncate versus rename
+[X] Configure su user and group
+[X] Understand create and file permissions
+[X] Test configuration using --debug
+[X] Perform a forced test rotation using -f
+[X] Preserve historical reports in an archive
+[X] Inspect archive filenames and permissions
+[~] Verify seven-archive retention safely
+[ ] Test retention without risking real reports
+[ ] Read compressed archives using zcat
+[ ] Troubleshoot logrotate errors
+[ ] Verify automatic logrotate scheduling
+[ ] Understand logrotate state files
+
+
+========================================================
+PHASE 7: GIT AND PROJECT MANAGEMENT
+========================================================
+
+[ ] Initialize and understand a Git repository
+[ ] Understand working tree and staging area
+[ ] Use git status
+[ ] Use git add and git commit
+[ ] Understand branches
+[ ] Create a .gitignore file
+[ ] Exclude generated logs from Git
+[ ] Write a project README
+[ ] Document installation and configuration
+[ ] Track project improvements using Git
+
+
+========================================================
+PHASE 8: PRODUCTION-QUALITY BASH
+========================================================
+
+[ ] Refactor the script into functions
+[ ] Move thresholds into configuration variables
+[ ] Improve error handling
+[ ] Implement meaningful exit codes
+[ ] Test healthy server conditions
+[ ] Test warning and critical conditions
+[ ] Test missing commands and permission errors
+[ ] Understand idempotency
+[ ] Apply least-privilege principles
+[ ] Review file and directory permissions
+[ ] Document common troubleshooting steps
+[ ] Review script security and reliability
+
+
+========================================================
+PHASE 9: ADVANCED MONITORING
+========================================================
+
+[ ] Monitor selected system services
+[ ] Monitor multiple filesystems
+[ ] Check network connectivity
+[ ] Add configurable monitoring thresholds
+[ ] Improve health report formatting
+[ ] Understand metrics and monitoring concepts
+[ ] Explore Prometheus
+[ ] Explore Grafana dashboards
+[ ] Understand alerts and alert thresholds
+
+
+========================================================
+PHASE 10: DEVOPS INTEGRATION
+========================================================
+
+[ ] Networking: IP addresses, DNS and ports
+[ ] HTTP and HTTPS basics
+[ ] Integrate Python where useful
+[ ] Containerize the project using Docker
+[ ] Write a Dockerfile
+[ ] Understand Docker volumes and logging
+[ ] Automate tests and linting using CI/CD
+[ ] Learn Ansible fundamentals
+[ ] Automate installation and configuration
+[ ] Explore cloud deployment using free resources
+[ ] Document the complete deployment process
+
+
+========================================================
+PROJECT DETAILS
+========================================================
+
+Project directory:
+~/devops-server-manager
+
+Health monitoring script:
+scripts/check_services.sh
+
+Health log:
+logs/server_health.log
+
+Cron schedule:
+Every five minutes
+
+Logrotate configuration:
+/etc/logrotate.d/server-health
+
+
+========================================================
+IMMEDIATE LEARNING PLAN
+========================================================
+
+1. Verify logrotate retention safely.
+2. Learn to inspect compressed archives using zcat.
+3. Verify automatic logrotate scheduling.
+4. Improve Bash error handling and exit codes.
+5. Learn cron troubleshooting.
+6. Refactor the script using functions.
+7. Add service monitoring.
+8. Add Git version control.
+9. Write project documentation.
+10. Add testing and production-quality improvements.
+11. Integrate selected DevOps tools.
+
+========================================================
+LEARNING RULES
+========================================================
+
+1. Learn one concept at a time.
+2. Understand the problem before writing code.
+3. Attempt challenges before seeing the solution.
+4. Explain commands and code in simple language.
+5. Test changes safely before applying them.
+6. Mark topics complete only when understood.
+7. Build practical skills, not just memorized commands.
+
+========================================================
+END OF CHECKLIST
+========================================================
